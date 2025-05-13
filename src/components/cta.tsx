@@ -36,10 +36,10 @@ export default function CTA() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-            <Button size="lg" className="bg-[#e8dfca] hover:bg-[#d4c9b1] text-[#1a4d2e]">
+            <Button size="lg" className="bg-[#e8dfca] hover:bg-[#d4c9b1] text-primary-default">
               Apply Now
             </Button>
-            <Button variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+            <Button variant="outline" size="lg" className="text-primary-default border-white hover:bg-white/10">
               Schedule Visit
             </Button>
           </motion.div>
