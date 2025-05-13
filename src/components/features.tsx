@@ -48,7 +48,7 @@ export default function Features() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#712779]">Why Choose Greenfield Academy?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#712779]">Why Choose Excellence Academy?</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We provide an environment where students can thrive academically, socially, and personally.
           </p>
