@@ -65,7 +65,7 @@ export default function Features() {
             >
               <Card className="h-full hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-full bg-[#e8dfca] flex items-center justify-center text-[#712779] mb-4">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-[#712779] mb-4">
                     {feature.icon}
                   </div>
                   <CardTitle>{feature.title}</CardTitle>

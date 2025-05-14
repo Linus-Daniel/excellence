@@ -61,7 +61,7 @@ export default function ClassesPage() {
   return (
     <div className="space-y-6 p-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold flex items-center gap-2">
+        <h1 className="text-2xl text-primary-dark font-bold flex items-center gap-2">
           <GraduationCap className="h-6 w-6" />
           My Classes
         </h1>
@@ -157,7 +157,7 @@ export default function ClassesPage() {
             <CardHeader>
               <CardTitle className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-lg font-bold">{cls.name}</h3>
+                  <h3 className="text-lg  text-primary-dark font-bold">{cls.name}</h3>
                   <p className="text-sm text-gray-600">{cls.classTeacher}</p>
                 </div>
                 <Badge variant={cls.type === "Senior" ? "default" : "secondary"}>
@@ -194,7 +194,7 @@ export default function ClassesPage() {
             </CardContent>
             <CardFooter >
               <Button variant="ghost" size="sm" asChild>
-                <Link href={`/teacher/classes/${cls.name.replace(/\s+/g, '-').toLowerCase()}`}>
+                <Link className="text-primary-dark" href={`/teacher/classes/${cls.name.replace(/\s+/g, '-').toLowerCase()}`}>
                   View Class <ChevronRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>

@@ -67,14 +67,19 @@ export default function TeacherSidebar() {
       href: "/teacher/settings",
     },
   ];
+  
+
 
   return (
-    <div className="hidden md:flex flex-col w-64 border-r bg-white">
+    <div className="hidden md:flex flex-col w-64 border-r bg-primary-dark">
       {/* Logo/School Name */}
       <div className="flex items-center justify-center h-16 border-b">
         <div className="flex items-center gap-2">
-          <GraduationCap className="h-6 w-6 text-blue-600" />
-          <span className="font-bold text-lg">SchoolName</span>
+          <div className="bg-accent p-2 rounded-full">
+
+          <GraduationCap className="h-6 w-6 text-primary-default" />
+          </div>
+          <span className="font-bold text-accent text-md">Excellence Int'l Academy</span>
         </div>
       </div>
       
@@ -88,8 +93,8 @@ export default function TeacherSidebar() {
               className={cn(
                 "flex items-center px-4 py-3 rounded-lg transition-colors",
                 pathname === item.href
-                  ? "bg-blue-50 text-blue-600 font-medium"
-                  : "text-gray-700 hover:bg-gray-100"
+                  ? "bg-blue-50 text-primary-default font-medium"
+                  : "text-accent hover:bg-gray-100 hover:text-primary-default "
               )}
             >
               <item.icon className="h-5 w-5 mr-3" />
@@ -109,8 +114,8 @@ export default function TeacherSidebar() {
             <div className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></div>
           </div>
           <div>
-            <p className="font-medium">Mr. Adebayo</p>
-            <p className="text-xs text-gray-500">Mathematics Teacher</p>
+            <p className="font-medium text-accent">Mr. Adebayo</p>
+            <p className="text-xs text-gray-100">Mathematics Teacher</p>
           </div>
         </div>
       </div>

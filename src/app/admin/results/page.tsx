@@ -11,7 +11,7 @@ export default function ClassesPage() {
     <div className="space-y-8 p-6">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold flex items-center gap-2">
-          <GraduationCap className="h-8 w-8 text-blue-600" />
+          <GraduationCap className="h-8 w-8 text-primary-default" />
           Class Management
         </h1>
         <div className="flex gap-4">
@@ -26,12 +26,12 @@ export default function ClassesPage() {
         {classes.map((cls) => (
           <Card 
             key={cls.id}
-            className="hover:shadow-lg transition-all hover:border-blue-300 border-2"
+            className="hover:shadow-lg transition-all hover:border-primary-default border-2"
           >
             <CardHeader>
               <div className="flex justify-between items-start">
-                <CardTitle className="text-xl flex items-center gap-2">
-                  <BookOpen className="h-5 w-5 text-blue-600" />
+                <CardTitle className="text-xl flex text-primary-default items-center gap-2">
+                  <BookOpen className="h-5 w-5 text-primary-default" />
                   {cls.name}
                 </CardTitle>
                 <Badge variant={cls.type === "Junior" ? "secondary" : "default"}>
@@ -42,7 +42,7 @@ export default function ClassesPage() {
             <CardContent className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2 text-sm bg-blue-50 px-3 py-1 rounded-full">
-                  <Users className="h-4 w-4 text-blue-600" />
+                  <Users className="h-4 w-4 text-primary-default" />
                   <span>{cls.studentCount} Students</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm bg-green-50 px-3 py-1 rounded-full">
@@ -77,7 +77,7 @@ export default function ClassesPage() {
                 asChild
                 disabled={!cls.resultsAvailable}
               >
-                <Link href={`/admin/classes/${cls.id}/results`}>
+                <Link className="bg-primary-default" href={`/admin/classes/${cls.id}/results`}>
                   {cls.resultsAvailable ? (
                     <>
                       <LineChart className="mr-2 h-4 w-4" />

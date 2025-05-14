@@ -21,7 +21,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-primary text-secondary py-20">
+      <section className="bg-primary-default text-secondary py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Our School</h1>
           <p className="text-xl max-w-2xl mx-auto">
@@ -34,7 +34,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Our Story</h2>
+            <h2 className="text-3xl font-bold text-primary-default mb-8 text-center">Our Story</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
@@ -50,12 +50,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="bg-secondary p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">Our Vision</h3>
+                <h3 className="text-xl font-semibold text-primary-default mb-4">Our Vision</h3>
                 <p className="text-muted-foreground mb-4">
                   To be the leading institution for secondary education in Nigeria, recognized for academic 
                   excellence and producing future leaders.
                 </p>
-                <h3 className="text-xl font-semibold text-primary mb-4">Our Mission</h3>
+                <h3 className="text-xl font-semibold text-primary-default mb-4">Our Mission</h3>
                 <p className="text-muted-foreground">
                   To provide a stimulating learning environment that empowers students to achieve their 
                   full potential and become responsible global citizens.
@@ -69,13 +69,13 @@ export default function AboutPage() {
       {/* Stats Section */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary mb-12 text-center">By The Numbers</h2>
+          <h2 className="text-3xl font-bold text-primary-default mb-12 text-center">By The Numbers</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <CardTitle className="text-4xl text-primary">{stat.value}</CardTitle>
+                  <CardTitle className="text-4xl text-primary-default">{stat.value}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{stat.label}</p>
@@ -90,10 +90,10 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-primary mb-8 text-center">Our History</h2>
+            <h2 className="text-3xl font-bold text-primary-default mb-8 text-center">Our History</h2>
             
             <div className="relative">
-              <div className="absolute left-4 h-full w-0.5 bg-primary/20 md:left-1/2 md:-ml-0.5" />
+              <div className="absolute left-4 h-full w-0.5 bg-primary-default-default/20 md:left-1/2 md:-ml-0.5" />
               
               {milestones.map((milestone, index) => (
                 <div 
@@ -101,10 +101,10 @@ export default function AboutPage() {
                   className={`relative mb-8 flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                    <div className="inline-block rounded-full bg-primary p-2 text-secondary">
+                    <div className="inline-block rounded-full bg-primary-default-default p-2 text-secondary">
                       <History className="h-5 w-5" />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary mt-2">{milestone.year}</h3>
+                    <h3 className="text-xl font-semibold text-primary-default mt-2">{milestone.year}</h3>
                     <p className="text-muted-foreground">{milestone.event}</p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
       {/* Leadership Section */}
       <section className="py-20 bg-accent">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary mb-12 text-center">Our Leadership</h2>
+          <h2 className="text-3xl font-bold text-primary-default mb-12 text-center">Our Leadership</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <Card>

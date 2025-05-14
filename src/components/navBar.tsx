@@ -11,6 +11,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [show,setShow] = useState<boolean>(true)
+  const [auth,setAuth] = useState<boolean>(false)
 
   const pathname = usePathname()
 
@@ -22,10 +23,21 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(()=>{
-    if(pathname.startsWith("/teacher") || pathname.startsWith("/admin"))
+  useEffect(() => {
+    if (pathname.startsWith("/teacher") || pathname.startsWith("/admin")) {
       setShow(false)
-  })
+    } else {
+      setShow(true)
+    }
+  
+    if (pathname.startsWith("/login")) {
+      setAuth(true)
+    } else {
+      setAuth(false)
+      setScrolled(window.screenY >10 )
+    }
+  }, [pathname])
+  
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -33,17 +45,19 @@ export default function Navbar() {
     { name: 'Academics', href: '/academics' },
     { name: 'Admissions', href: '/admissions' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Portals', href: '/login' },
+
   ]
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed w-full ${show?"":"hidden"} z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#712779] py-2 shadow-lg' : 'bg-transparent py-4'
-      }`}
-    >
+    initial={{ y: -100 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.5 }}
+    className={`fixed w-full ${show ? "" : "hidden"}  z-50 transition-all duration-300 ${
+      scrolled ? "bg-[#712779] py-2 shadow-lg" : "bg-transparent py-4"
+    }`}
+  >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
@@ -62,7 +76,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
-                  scrolled ? 'text-white hover:text-[#e8dfca]' : 'text-[#efe8d5] hover:text-[#1a4d2e]'
+                  scrolled ? 'text-white hover:text-[#e8dfca]' : 'text-[#efe8d5] hover:text-accent'
                 }`}
               >
                 {link.name}

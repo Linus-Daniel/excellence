@@ -25,7 +25,7 @@ export default function MobileSidebar({ isOpen, onClose }: {
     {
       name: "Dashboard",
       icon: LayoutDashboard,
-      href: "/teacher/dashboard",
+      href: "/teacher",
     },
     {
       name: "My Classes",
@@ -78,14 +78,17 @@ export default function MobileSidebar({ isOpen, onClose }: {
       <div className="fixed inset-0 bg-black/50" onClick={onClose} />
       
       {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-white">
+      <div className="fixed inset-y-0 left-0 w-64 bg-primary-dark">
         <div className="flex items-center justify-between h-16 px-4 border-b">
           <div className="flex items-center gap-2">
-            <GraduationCap className="h-6 w-6 text-blue-600" />
-            <span className="font-bold text-lg">SchoolName</span>
+            <div className="p-1 rounded-full bg-accent">
+
+            <GraduationCap className="h-6 w-6 text-primary-default" />
+            </div>
+            <span className="font-bold text-md text-accent">Excellence Academy</span>
           </div>
           <button onClick={onClose}>
-            <X className="h-5 w-5" />
+            <X className="h-5 text-accent w-5" />
           </button>
         </div>
         
@@ -97,8 +100,8 @@ export default function MobileSidebar({ isOpen, onClose }: {
               className={cn(
                 "flex items-center px-4 py-3 rounded-lg transition-colors",
                 pathname === item.href
-                  ? "bg-blue-50 text-blue-600 font-medium"
-                  : "text-gray-700 hover:bg-gray-100"
+                  ? "bg-primary-default text-accent font-medium"
+                  : "text-accent hover:text-primary-dark hover:bg-gray-100"
               )}
               onClick={onClose}
             >

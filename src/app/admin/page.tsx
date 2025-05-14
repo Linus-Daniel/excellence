@@ -36,14 +36,14 @@ export default function AdminDashboard() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <motion.h1 
-          className="text-3xl font-bold"
+          className="text-xl text-primary-default font-bold"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           Dashboard Overview
         </motion.h1>
-        <Button>Generate Monthly Report</Button>
+        <Button variant={"default"}>Generate Monthly Report</Button>
       </div>
 
       {/* Metrics Grid */}
@@ -171,7 +171,7 @@ export default function AdminDashboard() {
             <div className="space-y-4">
               {recentActivity.map((activity) => (
                 <div key={activity.id} className="flex items-center gap-4">
-                  <div className="rounded-full bg-gray-100 p-2">
+                  <div className="rounded-full bg-secondary p-2">
                     <Users className="h-4 w-4" />
                   </div>
                   <div>
@@ -203,14 +203,14 @@ function MetricCard({ title, value, icon, trend, variant = "default" }:CardProps
       transition={{ type: "spring", stiffness: 300 }}
     >
       <Card >
-        <CardHeader className="flex flex-row items-center justify-between pb-2">
-          <CardTitle className="text-sm font-medium text-muted-foreground">
+        <CardHeader className="flex flex-row items-center text-primary-default justify-between pb-2">
+          <CardTitle className="text-sm font-medium  text-primary-dark">
             {title}
           </CardTitle>
           {icon}
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{value}</div>
+          <div className="text-2xl text-primary-default font-bold">{value}</div>
           <p className="text-xs text-muted-foreground mt-1">
             {trend}
           </p>

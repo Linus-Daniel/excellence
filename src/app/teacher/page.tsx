@@ -33,7 +33,7 @@ export default function TeacherDashboard() {
       {/* Welcome Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold">Welcome, {teacher.name}</h1>
+          <h1 className="text-2xl font-bold text-primary-default">Welcome, {teacher.name}</h1>
           <p className="text-gray-600">Mathematics Department</p>
         </div>
         <div className="flex gap-2">

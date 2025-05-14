@@ -14,11 +14,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileSidebar from "./mobileSideBar";
 
 export default function TeacherNavbar() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function TeacherNavbar() {
         onClose={() => setMobileSidebarOpen(false)} 
       />
       
-      <header className="bg-white border-b">
+      <header className={`bg-white border-primary-dark border-b `}>
         <div className="flex items-center justify-between px-6 py-4">
           {/* Mobile Menu Button */}
           <Button 
@@ -41,27 +42,27 @@ export default function TeacherNavbar() {
           
           {/* Search Bar */}
           <div className="relative mx-4 flex-1 md:max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-primary-dark" />
             <Input
               placeholder="Search..."
-              className="pl-10"
+              className="pl-10 placeholder:text-primary-default"
             />
           </div>
           
           {/* Right Side Icons */}
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon">
-              <Bell className="h-5 w-5" />
+              <Bell className=" text-primary-default h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon">
-              <Mail className="h-5 w-5" />
+              <Mail className=" text-primary-default h-5 w-5" />
             </Button>
             
             {/* Profile Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
-                  <User className="h-5 w-5" />
+                  <User className="h-5 w-5 text-primary-default" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">

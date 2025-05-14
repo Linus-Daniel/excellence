@@ -76,7 +76,7 @@ export default function Sidebar() {
         }}
         transition={{ type: "spring", stiffness: 300 }}
         className={cn(
-          "hidden md:flex flex-col h-screen bg-gradient-to-b from-blue-50 to-white border-r border-gray-200",
+          "hidden md:flex flex-col h-screen bg-primary-default",
           isCollapsed ? "items-center" : ""
         )}
       >
@@ -85,9 +85,9 @@ export default function Sidebar() {
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xl font-bold text-blue-800"
+              className="text-xl font-bold text-secondary"
             >
-              SchoolAdmin
+              Excellence Academy
             </motion.h1>
           )}
           <button 
@@ -111,10 +111,10 @@ export default function Sidebar() {
               <Link
                 href={route.path}
                 className={cn(
-                  "flex items-center p-3 rounded-lg transition-colors",
+                  "flex items-center p-3 rounded-lg text-secondary transition-colors",
                   pathname === route.path 
-                    ? "bg-blue-100 text-blue-700 font-medium" 
-                    : "hover:bg-gray-100 text-gray-700"
+                    ? "bg-accent text-primary-default font-medium" 
+                    : "hover:bg-secondary hover:text-primary-dark"
                 )}
               >
                 <span className={cn(isCollapsed ? "" : "mr-3")}>

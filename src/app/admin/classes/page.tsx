@@ -17,22 +17,18 @@ export default function ClassesPage() {
   return (
     <div className="space-y-8">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900">Class Management</h1>
-        <Button asChild>
-          <Link href="/admin/classes/create">
-            <Plus className="mr-2 h-4 w-4" /> Create Class
-          </Link>
-        </Button>
+        <h1 className="text-3xl font-bold text-primary-dark">Class Management</h1>
+       
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {classData.map((cls) => (
           <Link key={cls.name} href={`/admin/classes/${cls.name.replace(/\s+/g, '-').toLowerCase()}`}>
-            <Card className="hover:shadow-lg transition-shadow hover:border-blue-300 h-full">
+            <Card className="hover:shadow-lg transition-shadow hover:border-primary-default h-full">
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl flex items-center gap-2">
-                    <GraduationCap className="h-5 w-5 text-blue-600" />
+                  <CardTitle className="text-xl text-primary-default flex items-center gap-2">
+                    <GraduationCap className="h-5 w-5 text-primary-default" />
                     {cls.name}
                   </CardTitle>
                   <ChevronRight className="h-5 w-5 text-gray-400" />
